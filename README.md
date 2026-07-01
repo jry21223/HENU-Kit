@@ -141,6 +141,13 @@ HENU-Library-Seat-Book
 
 ---
 
+## 友情链接
+
+- [HENU-CS/SurvivalHandbook](https://github.com/HENU-CS/SurvivalHandbook)
+- [Henu-Kaguya/Henu-Kaguya](https://github.com/Henu-Kaguya/Henu-Kaguya)
+
+---
+
 ## 贡献
 
 欢迎提交 Issue 或 Pull Request。
