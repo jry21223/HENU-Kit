@@ -143,8 +143,8 @@ HENU-Library-Seat-Book
 
 ## 友情链接
 
-- [HENU-CS/SurvivalHandbook](https://github.com/HENU-CS/SurvivalHandbook)
-- [Henu-Kaguya/Henu-Kaguya](https://github.com/Henu-Kaguya/Henu-Kaguya)
+- [HENU-CS/SurvivalHandbook](https://github.com/HENU-CS/SurvivalHandbook)：河南大学生存手册与飞跃手册，整理校园生活、学习发展与升学出路相关经验。
+- [Henu-Kaguya/Henu-Kaguya](https://github.com/Henu-Kaguya/Henu-Kaguya)：河南大学计算机科学与技术专业课程资料及学习指南合集。
 
 ---
 
