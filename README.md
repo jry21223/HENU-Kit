@@ -44,6 +44,7 @@
 | HENU Library Auto Seat Book | [`jry21223/Henu_library_auto_seat_book`](https://github.com/jry21223/Henu_library_auto_seat_book) | 图书馆座位预约自动化工具 | 实用工具 |
 | HENU Survival Handbook | [`HENU-CS/SurvivalHandbook`](https://github.com/HENU-CS/SurvivalHandbook) | 河南大学生存手册与飞跃手册，整理校园生活、学习发展与升学出路相关经验 | 资料手册 |
 | Henu-Kaguya | [`Henu-Kaguya/Henu-Kaguya`](https://github.com/Henu-Kaguya/Henu-Kaguya) | 河南大学计算机科学与技术专业课程资料及学习指南合集 | 学习资料 |
+| HENU Dormitory Improve Project | [`ESP-8266-offical/henu-dormitory-improve-project`](https://github.com/ESP-8266-offical/henu-dormitory-improve-project) | 河南大学宿舍改造计划，当前内容适用于顺河公寓 | 生活改造 |
 
 ---
 
