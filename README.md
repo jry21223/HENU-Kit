@@ -42,6 +42,8 @@
 | HENU Final Review | [`jry21223/HENU-Final-Review`](https://github.com/jry21223/HENU-Final-Review) | 期末复习、刷题、模拟卷、答案解析与复习资料整理 | 学习工具 |
 | HENU-Autologin | [`jry21223/HENU-Autologin`](https://github.com/jry21223/HENU-Autologin) | 河南大学校园网自动登录工具 | 实用工具 |
 | HENU Library Auto Seat Book | [`jry21223/Henu_library_auto_seat_book`](https://github.com/jry21223/Henu_library_auto_seat_book) | 图书馆座位预约自动化工具 | 实用工具 |
+| HENU Survival Handbook | [`HENU-CS/SurvivalHandbook`](https://github.com/HENU-CS/SurvivalHandbook) | 河南大学生存手册与飞跃手册，整理校园生活、学习发展与升学出路相关经验 | 资料手册 |
+| Henu-Kaguya | [`Henu-Kaguya/Henu-Kaguya`](https://github.com/Henu-Kaguya/Henu-Kaguya) | 河南大学计算机科学与技术专业课程资料及学习指南合集 | 学习资料 |
 
 ---
 
@@ -138,13 +140,6 @@ HENU-Library-Seat-Book
 - 将敏感配置提交到公开仓库
 
 如果项目需要保存账号、密码、Token 或 Cookie，请优先使用环境变量、本地配置文件或 GitHub Secrets，并确保相关文件已加入 `.gitignore`。
-
----
-
-## 友情链接
-
-- [HENU-CS/SurvivalHandbook](https://github.com/HENU-CS/SurvivalHandbook)：河南大学生存手册与飞跃手册，整理校园生活、学习发展与升学出路相关经验。
-- [Henu-Kaguya/Henu-Kaguya](https://github.com/Henu-Kaguya/Henu-Kaguya)：河南大学计算机科学与技术专业课程资料及学习指南合集。
 
 ---
 
