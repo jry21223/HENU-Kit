@@ -158,12 +158,7 @@ HENU-Library-Seat-Book
 
 ## License
 
-许可证待定。
-
-如果没有特殊限制，建议使用：
-
-- **MIT License**：简单、宽松，适合学生工具项目
-- **Apache-2.0 License**：更正式，包含专利授权条款
+本项目采用 [MIT License](./LICENSE) 开源协议。
 
 ---
 
