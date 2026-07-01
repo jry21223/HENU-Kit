@@ -17,7 +17,7 @@
   ·
   <a href="https://github.com/jry21223/HENU-Final-Review">HENU Final Review</a>
   ·
-  <a href="https://github.com/jry21223/HENU-Autologin">HENU-Autologin</a>
+  <a href="https://github.com/jry21223/HENU-Autologin">HENU Autologin</a>
   ·
   <a href="https://github.com/jry21223/Henu_library_auto_seat_book">Library Seat Book</a>
 </p>
