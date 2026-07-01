@@ -45,6 +45,7 @@
 | HENU Survival Handbook | [`HENU-CS/SurvivalHandbook`](https://github.com/HENU-CS/SurvivalHandbook) | 河南大学生存手册与飞跃手册，整理校园生活、学习发展与升学出路相关经验 | 资料手册 |
 | Henu-Kaguya | [`Henu-Kaguya/Henu-Kaguya`](https://github.com/Henu-Kaguya/Henu-Kaguya) | 河南大学计算机科学与技术专业课程资料及学习指南合集 | 学习资料 |
 | HENU Dormitory Improve Project | [`ESP-8266-offical/henu-dormitory-improve-project`](https://github.com/ESP-8266-offical/henu-dormitory-improve-project) | 河南大学宿舍改造计划，当前内容适用于顺河公寓 | 生活改造 |
+| CS-Survive-Henu | [`cs-survive-henu.github.io`](https://cs-survive-henu.github.io) | 河南大学计算机生存指北，由计算机学院和软件学院学生/毕业生共同维护的开源生存指南 | 资料手册 |
 
 ---
 
