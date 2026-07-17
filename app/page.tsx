@@ -379,7 +379,7 @@ export default function Home() {
             <div className="arch-lines" />
             <p>明德 · 新民<br />止于至善</p>
           </div>
-          <div className="float-card food-note"><span>今日灵感</span><strong>灌汤包 + 杏仁茶</strong><small>开封味道从这里开始</small></div>
+          <div className="float-card food-note"><span>学生自发运营</span><strong>非官方组织</strong></div>
           <div className="float-card weather-note"><span>新生提示</span><strong>先认路，再赶课</strong><small>收藏教学楼与宿舍定位</small></div>
         </div>
       </section>
@@ -407,7 +407,7 @@ export default function Home() {
 
       <section className="section food-section" id="food">
         <div className="section-heading food-heading">
-          <div><span className="kicker">HENU FOOD MAP</span><h2>下课以后，<br />去吃点真的。</h2></div>
+          <div><span className="kicker">HENU FOOD MAP</span><h2>学长甄选</h2></div>
           <p>校内食堂、河大周边、开封老字号与夜市，用真实地图串起来。首版资料以公开信息为底稿，欢迎学生实地校正。</p>
         </div>
 
