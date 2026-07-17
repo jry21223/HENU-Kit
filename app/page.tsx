@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import normalizedFoodData from "../data/food-spots.normalized.json";
+import FoodSubmissionSection from "./FoodSubmissionSection";
 
 type VoteVerdict = "underrated" | "fair" | "overrated";
 type VoteState = Record<string, {
@@ -176,7 +177,7 @@ const defaultFoodSpots: FoodSpot[] = [
 const tools = [
   { name: "HENU Assistant", desc: "课表、空教室、图书馆、请假与选课等校园服务入口", href: "https://github.com/jry21223/HENU_Assistant", label: "核心项目" },
   { name: "期末复习站", desc: "课程资料、刷题、模拟卷与答案解析的集中索引", href: "https://github.com/jry21223/HENU-Final-Review", label: "学习" },
-  { name: "校园网自动登录", desc: "减少重复认证；使用前请阅读安全与合规说明", href: "https://github.com/jry21223/HENU-Autologin", label: "效率" },
+  { name: "校园网自动登录", desc: "路由器自动登录校园网脚本，减少重复认证；使用前请阅读安全与合规说明", href: "https://github.com/jry21223/HENU-Autologin", label: "效率" },
   { name: "图书馆座位预约", desc: "自动化预约工具，按仓库说明配置并合理使用", href: "https://github.com/jry21223/Henu_library_auto_seat_book", label: "学习" },
   { name: "HENU 生存手册", desc: "校园生活、学习发展、升学与出路经验合集", href: "https://github.com/HENU-CS/SurvivalHandbook", label: "攻略" },
   { name: "宿舍改善计划", desc: "宿舍生活与改造经验，当前内容以顺河公寓为主", href: "https://github.com/ESP-8266-offical/henu-dormitory-improve-project", label: "生活" },
@@ -351,6 +352,7 @@ export default function Home() {
         <nav aria-label="主导航">
           <a href="#guide">新生攻略</a>
           <a href="#food">美食地图</a>
+          <a href="#food-submit">投稿美食</a>
           <a href="#tools">校园工具</a>
         </nav>
         <a className="header-action" href="https://github.com/jry21223/HENU-Kit" target="_blank" rel="noreferrer">一起共建 ↗</a>
@@ -555,6 +557,8 @@ export default function Home() {
         <p className="photo-note">图片为真实菜品氛围图，不代表具体商家出品；营业时间、价格与门店状态可能变化，请以地图和现场信息为准。</p>
       </section>
 
+      <FoodSubmissionSection />
+
       <section className="section tools-section" id="tools">
         <div className="section-heading">
           <div><span className="kicker">CAMPUS TOOLBOX</span><h2>可以看看这些，<br />也许正好对你有用。</h2></div>
@@ -571,7 +575,7 @@ export default function Home() {
 
       <section className="contribute">
         <div><span className="kicker">BUILT BY STUDENTS</span><h2>你踩过的坑，<br />可以成为别人的路标。</h2></div>
-        <div><p>发现信息过期？有真正值得推荐的窗口、店铺或校园经验？提交一条线索，让这份攻略越来越像河大学生自己的生活地图。</p><a className="button light" href="https://github.com/jry21223/HENU-Kit/issues/new" target="_blank" rel="noreferrer">提交攻略线索 <span>→</span></a></div>
+        <div><p>发现信息过期？有真正值得推荐的窗口、店铺或校园经验？美食可以直接在站内投稿，其他攻略也可以通过 GitHub 表单告诉我们。</p><div className="contribute-actions"><a className="button light" href="#food-submit">投稿一家好店 <span>→</span></a><a className="contribute-link" href="https://github.com/jry21223/HENU-Kit/issues/new" target="_blank" rel="noreferrer">提交其他攻略 ↗</a></div></div>
       </section>
 
       <footer>

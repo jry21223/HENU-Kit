@@ -26,3 +26,13 @@ export const foodSpots = sqliteTable("food_spots", {
   updatedAt: text("updated_at").notNull().default(sql`CURRENT_TIMESTAMP`),
   updatedBy: text("updated_by").notNull(),
 });
+
+export const foodSubmissions = sqliteTable("food_submissions", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  submitterEmail: text("submitter_email").notNull(),
+  payload: text("payload").notNull(),
+  status: text("status").notNull().default("pending"),
+  createdAt: text("created_at").notNull().default(sql`CURRENT_TIMESTAMP`),
+  reviewedAt: text("reviewed_at"),
+  reviewedBy: text("reviewed_by"),
+});
