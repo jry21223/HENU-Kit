@@ -1,0 +1,62 @@
+name: 补充校园生活攻略
+description: 分享报到、宿舍、学习、交通、办事或避坑经验
+title: "[攻略补充] "
+labels: ["content"]
+body:
+  - type: markdown
+    attributes:
+      value: 你的真实经验可能正好能帮到下一届新生。请说明适用校区和时间，避免把个人经历写成绝对规则。
+  - type: dropdown
+    id: category
+    attributes:
+      label: 攻略类别
+      options:
+        - 新生报到
+        - 宿舍与校园生活
+        - 食堂与周边美食
+        - 课程、考试与学习
+        - 校园网络与常用工具
+        - 交通、快递与出行
+        - 医疗、办事与安全
+        - 社团、竞赛与发展
+        - 其他
+    validations:
+      required: true
+  - type: dropdown
+    id: campus
+    attributes:
+      label: 适用校区
+      options: [全部校区, 明伦校区, 金明校区, 龙子湖校区, 其他或不确定]
+    validations:
+      required: true
+  - type: input
+    id: summary
+    attributes:
+      label: 一句话总结
+      placeholder: 例如：新生办理校园卡时最好提前准备这些材料
+    validations:
+      required: true
+  - type: textarea
+    id: guide
+    attributes:
+      label: 具体经验或步骤
+      placeholder: |
+        1. 先……
+        2. 然后……
+        3. 注意……
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: 参考来源或有效时间
+      description: 涉及校规、收费、时间或办事流程时，请提供学校官方链接或注明亲自办理的时间。
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: 提交确认
+      options:
+        - label: 我已隐去学号、宿舍号、联系方式等个人敏感信息。
+          required: true

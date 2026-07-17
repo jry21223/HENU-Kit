@@ -1,0 +1,57 @@
+name: 纠正过期或错误信息
+description: 地址、营业时间、价格、地图、档位或商家状态有变化时使用
+title: "[信息纠正] "
+labels: ["content"]
+body:
+  - type: markdown
+    attributes:
+      value: 感谢纠错。只需指出“哪里不对”和“现在应该是什么”，维护者会进一步核验。
+  - type: input
+    id: target
+    attributes:
+      label: 哪一条信息需要修改？
+      placeholder: 例如：鼓楼夜市、金明校区南苑餐厅
+    validations:
+      required: true
+  - type: dropdown
+    id: field
+    attributes:
+      label: 问题类型
+      options:
+        - 商家已搬迁、停业或改名
+        - 地址或地图位置错误
+        - 营业时间错误
+        - 菜品或价格信息过期
+        - 推荐理由或评价不准确
+        - 五档榜单位置不合理
+        - 图片不准确或涉及版权
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: current_problem
+    attributes:
+      label: 当前信息有什么问题？
+      placeholder: 网站现在显示……，但实际情况是……
+    validations:
+      required: true
+  - type: textarea
+    id: correct_information
+    attributes:
+      label: 建议修改为什么？
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 核验依据
+      description: 可以是现场照片、地图链接、公开通知或最近到访时间。
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 隐私确认
+      options:
+        - label: 提交内容不包含私人手机号、微信、住址等敏感信息。
+          required: true

@@ -1,0 +1,190 @@
+{
+  "version": 1,
+  "spots": [
+    {
+      "id": "diyilou",
+      "name": "第一楼",
+      "campus": "明伦",
+      "tier": "人上人",
+      "provenance": {
+        "type": "government",
+        "name": "开封市鼓楼区人民政府",
+        "url": "https://www.gulou.gov.cn/kfsglqwz/c00173/pc/content/content_1889528269503926272.html",
+        "checkedAt": "2026-07-16",
+        "notes": "政府商圈资料中列出的开封老字号。具体门店仍需地图核验。"
+      },
+      "recommendReasons": [
+        "适合完成一次较正式的开封味道体验",
+        "老字号辨识度高,适合家人来访时聚餐"
+      ],
+      "recommendedDishes": [
+        {
+          "name": "灌汤包",
+          "note": "先开窗、后喝汤,再吃包",
+          "image": "https://images.unsplash.com/photo-1559314809-0d155014e29e?auto=format&fit=crop&w=1200&q=82"
+        }
+      ],
+      "environmentPhotos": [
+        {
+          "label": "中式餐厅环境参考图,具体门店以现场为准",
+          "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1400&q=82"
+        }
+      ]
+    },
+    {
+      "id": "gulou",
+      "name": "鼓楼夜市",
+      "campus": "明伦",
+      "tier": "夯",
+      "provenance": {
+        "type": "government",
+        "name": "开封市鼓楼区人民政府",
+        "url": "https://www.gulou.gov.cn/kfsglqwz/c00173/pc/content/content_1889528282980225024.html",
+        "checkedAt": "2026-07-16",
+        "notes": "政府公开的鼓楼夜市介绍。"
+      },
+      "recommendReasons": [
+        "第一次体验开封夜市的代表性入口",
+        "小吃品类集中,适合多人分食尝鲜"
+      ],
+      "recommendedDishes": [
+        {
+          "name": "灌汤包",
+          "note": "开封代表性面点,注意趁热慢慢吃",
+          "image": "https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=1200&q=82"
+        },
+        {
+          "name": "杏仁茶",
+          "note": "夜市常见甜口热饮,适合搭配小吃",
+          "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=82"
+        }
+      ],
+      "environmentPhotos": [
+        {
+          "label": "夜市氛围参考图,等待学生实拍替换",
+          "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1400&q=82"
+        }
+      ]
+    },
+    {
+      "id": "jinming-canteen",
+      "name": "金明校区南苑餐厅",
+      "campus": "金明",
+      "tier": "NPC",
+      "provenance": {
+        "type": "university",
+        "name": "河南大学总务处",
+        "url": "https://hq.henu.edu.cn/info/1021/19801.htm",
+        "checkedAt": "2026-07-16",
+        "notes": "学校公开信息确认金明校区南苑餐厅及特色窗口。"
+      },
+      "recommendReasons": [
+        "校内日常就餐方便,适合建立固定路线",
+        "特色窗口能覆盖早餐、快餐和晚饭场景"
+      ],
+      "recommendedDishes": [
+        {
+          "name": "特色窗口套餐",
+          "note": "优先选择排队稳定、明码标价的窗口",
+          "image": "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1200&q=82"
+        }
+      ],
+      "environmentPhotos": [
+        {
+          "label": "校园餐厅环境参考图,等待学生实拍替换",
+          "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1400&q=82"
+        }
+      ]
+    },
+    {
+      "id": "longzihu",
+      "name": "龙子湖高校园区餐饮圈",
+      "campus": "龙子湖",
+      "tier": "拉完了",
+      "provenance": {
+        "type": "community",
+        "name": "HENU-Kit 待核验条目",
+        "url": "https://github.com/jry21223/HENU-Kit",
+        "checkedAt": "2026-07-16",
+        "notes": "范围性条目,缺少具体商家,等待学生提交可核验来源。"
+      },
+      "recommendReasons": [
+        "目前仅作为待补充的商圈入口",
+        "不建议在缺少具体店名和近期评价时盲目出发"
+      ],
+      "recommendedDishes": [
+        {
+          "name": "等待补充",
+          "note": "需要学生提交具体商家与实拍菜品",
+          "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=82"
+        }
+      ],
+      "environmentPhotos": [
+        {
+          "label": "大学城餐饮氛围参考图,等待实地核验",
+          "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1400&q=82"
+        }
+      ]
+    },
+    {
+      "id": "minglun-canteen",
+      "name": "明伦校区学苑食堂",
+      "campus": "明伦",
+      "tier": "NPC",
+      "provenance": {
+        "type": "university",
+        "name": "河南大学基建处",
+        "url": "https://jjc.henu.edu.cn/info/1005/1863.htm",
+        "checkedAt": "2026-07-16",
+        "notes": "学校公开的学苑食堂建设项目信息。"
+      },
+      "recommendReasons": [
+        "校内步行可达,赶课时最省时间",
+        "学生餐价更适合作为日常固定选择"
+      ],
+      "recommendedDishes": [
+        {
+          "name": "当天窗口套餐",
+          "note": "优先看当日菜单和排队情况",
+          "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=1200&q=82"
+        }
+      ],
+      "environmentPhotos": [
+        {
+          "label": "校园食堂环境参考图,等待学生实拍替换",
+          "image": "https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1400&q=82"
+        }
+      ]
+    },
+    {
+      "id": "xisi",
+      "name": "西司夜市",
+      "campus": "明伦",
+      "tier": "顶级",
+      "provenance": {
+        "type": "government",
+        "name": "开封市人民政府",
+        "url": "https://www.kaifeng.gov.cn/kfsrmzfwz/bmdt/pc/content/content_1852265940682854400.html",
+        "checkedAt": "2026-07-16",
+        "notes": "市场监管部门公开信息确认夜市名称与经营场景。"
+      },
+      "recommendReasons": [
+        "生活化夜市氛围,适合朋友结伴",
+        "小份选择较多,预算更容易控制"
+      ],
+      "recommendedDishes": [
+        {
+          "name": "烧烤小串",
+          "note": "适合多人分着点,价格以现场为准",
+          "image": "https://images.unsplash.com/photo-1529563021893-cc83c992d75d?auto=format&fit=crop&w=1200&q=82"
+        }
+      ],
+      "environmentPhotos": [
+        {
+          "label": "夜间餐饮氛围参考图,等待学生实拍替换",
+          "image": "https://images.unsplash.com/photo-1516211697506-8360dbcfe9a4?auto=format&fit=crop&w=1400&q=82"
+        }
+      ]
+    }
+  ]
+}

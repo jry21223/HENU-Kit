@@ -9,9 +9,13 @@
     "dev": "node node_modules/vinext/dist/cli.js dev",
     "build": "node node_modules/vinext/dist/cli.js build",
     "start": "node node_modules/vinext/dist/cli.js start",
+    "preview": "node scripts/local-preview.mjs",
     "test": "npm run build && node --test tests/rendered-html.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
-    "db:generate": "drizzle-kit generate"
+    "db:generate": "node node_modules/drizzle-kit/bin.cjs generate",
+    "food:import": "node scripts/import-food-data.mjs",
+    "food:check": "node scripts/import-food-data.mjs --check",
+    "food:push": "node scripts/import-food-api.mjs"
   },
   "dependencies": {
     "drizzle-orm": "0.45.2",

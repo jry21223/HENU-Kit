@@ -1,6 +1,21 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import normalizedFoodData from "../data/food-spots.normalized.json";
+
+type VoteVerdict = "underrated" | "fair" | "overrated";
+type VoteState = Record<string, {
+  counts: Record<VoteVerdict, number>;
+  current: VoteVerdict | null;
+}>;
+
+type FoodProvenance = {
+  type: "government" | "university" | "merchant" | "community";
+  name: string;
+  url: string;
+  checkedAt: string;
+  notes: string;
+};
 
 type FoodSpot = {
   id: string;
@@ -18,9 +33,27 @@ type FoodSpot = {
   mapKeyword: string;
   map: string;
   verified: boolean;
+  tier: "夯" | "顶级" | "人上人" | "NPC" | "拉完了";
+  provenance?: FoodProvenance;
+  recommendReasons?: string[];
+  recommendedDishes?: Array<{ name: string; note: string; image: string }>;
+  environmentPhotos?: Array<{ label: string; image: string }>;
+  importedFields?: string[];
 };
 
-const foodSpots: FoodSpot[] = [
+const normalizedSpotById = new Map(
+  normalizedFoodData.spots.map((spot) => [spot.id, spot]),
+);
+
+const foodTiers = [
+  { name: "夯", note: "必须吃", className: "hang" },
+  { name: "顶级", note: "稳稳推荐", className: "top" },
+  { name: "人上人", note: "预算足再冲", className: "elite" },
+  { name: "NPC", note: "日常不出错", className: "npc" },
+  { name: "拉完了", note: "先别急着去", className: "done" },
+] as const;
+
+const defaultFoodSpots: FoodSpot[] = [
   {
     id: "gulou",
     name: "鼓楼夜市",
@@ -37,6 +70,7 @@ const foodSpots: FoodSpot[] = [
     mapKeyword: "开封鼓楼夜市",
     map: "https://www.openstreetmap.org/export/embed.html?bbox=114.343%2C34.787%2C114.358%2C34.798&layer=mapnik&marker=34.793%2C114.351",
     verified: true,
+    tier: "夯",
   },
   {
     id: "xisi",
@@ -54,6 +88,7 @@ const foodSpots: FoodSpot[] = [
     mapKeyword: "开封西司夜市",
     map: "https://www.openstreetmap.org/export/embed.html?bbox=114.328%2C34.785%2C114.344%2C34.798&layer=mapnik&marker=34.791%2C114.336",
     verified: true,
+    tier: "顶级",
   },
   {
     id: "diyilou",
@@ -71,6 +106,7 @@ const foodSpots: FoodSpot[] = [
     mapKeyword: "开封第一楼灌汤包",
     map: "https://www.openstreetmap.org/export/embed.html?bbox=114.342%2C34.786%2C114.358%2C34.799&layer=mapnik&marker=34.793%2C114.350",
     verified: true,
+    tier: "人上人",
   },
   {
     id: "minglun-canteen",
@@ -88,6 +124,7 @@ const foodSpots: FoodSpot[] = [
     mapKeyword: "河南大学明伦校区学苑食堂",
     map: "https://www.openstreetmap.org/export/embed.html?bbox=114.348%2C34.814%2C114.365%2C34.827&layer=mapnik&marker=34.821%2C114.356",
     verified: true,
+    tier: "NPC",
   },
   {
     id: "jinming-canteen",
@@ -105,6 +142,7 @@ const foodSpots: FoodSpot[] = [
     mapKeyword: "河南大学金明校区南苑餐厅",
     map: "https://www.openstreetmap.org/export/embed.html?bbox=114.296%2C34.806%2C114.318%2C34.823&layer=mapnik&marker=34.815%2C114.307",
     verified: true,
+    tier: "NPC",
   },
   {
     id: "longzihu",
@@ -115,15 +153,25 @@ const foodSpots: FoodSpot[] = [
     distance: "地铁/骑行可达",
     address: "郑州市郑东新区龙子湖高校园区",
     hours: "各商家不同",
-    review: "品类多、更新快，适合按‘离校距离 + 预算 + 是否排队’筛选。首次到店请优先查看近期地图信息。",
+    review: "这个条目范围太大，还不是一家能直接去吃的具体店。先别盲冲，等学生补充实地核验过的门店后再升级。",
     tags: ["商圈", "聚餐", "地铁"],
     image: "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1200&q=82",
     imageAlt: "多人分享的亚洲餐食，菜品示意图",
     mapKeyword: "郑州龙子湖高校园区美食",
     map: "https://www.openstreetmap.org/export/embed.html?bbox=113.790%2C34.794%2C113.825%2C34.817&layer=mapnik&marker=34.805%2C113.807",
     verified: false,
+    tier: "拉完了",
   },
-];
+].map((spot) => {
+  const normalized = normalizedSpotById.get(spot.id);
+  return {
+    ...spot,
+    provenance: normalized?.provenance as FoodProvenance | undefined,
+    recommendReasons: normalized?.recommendReasons,
+    recommendedDishes: normalized?.recommendedDishes,
+    environmentPhotos: normalized?.environmentPhotos,
+  };
+});
 
 const tools = [
   { name: "HENU Assistant", desc: "课表、空教室、图书馆、请假与选课等校园服务入口", href: "https://github.com/jry21223/HENU_Assistant", label: "核心项目" },
@@ -141,10 +189,96 @@ const guides = [
 ];
 
 export default function Home() {
+  const [foodSpots, setFoodSpots] = useState<FoodSpot[]>(defaultFoodSpots);
   const [campus, setCampus] = useState<"全部" | FoodSpot["campus"]>("全部");
-  const [activeSpot, setActiveSpot] = useState(foodSpots[0]);
+  const [activeSpot, setActiveSpot] = useState(defaultFoodSpots[0]);
   const [query, setQuery] = useState("");
   const [saved, setSaved] = useState<string[]>([]);
+  const [rankings, setRankings] = useState<Record<string, FoodSpot["tier"]>>(
+    Object.fromEntries(defaultFoodSpots.map((spot) => [spot.id, spot.tier])),
+  );
+  const [canEditRankings, setCanEditRankings] = useState(false);
+  const [rankingUser, setRankingUser] = useState<string | null>(null);
+  const [rankingMessage, setRankingMessage] = useState("正在确认榜单权限…");
+  const [votes, setVotes] = useState<VoteState>({});
+  const [canVote, setCanVote] = useState(false);
+  const [voteMessage, setVoteMessage] = useState("正在加载大家的看法…");
+  const [detailTab, setDetailTab] = useState<"details" | "votes">("details");
+
+  useEffect(() => {
+    fetch("/api/food-spots")
+      .then(async (response) => {
+        if (!response.ok) throw new Error("导入商家加载失败");
+        return response.json() as Promise<{ spots: FoodSpot[] }>;
+      })
+      .then((data) => {
+        if (!data.spots.length) return;
+        setFoodSpots((current) => {
+          const merged = new Map(current.map((spot) => [spot.id, spot]));
+          for (const spot of data.spots) {
+            const existing = merged.get(spot.id);
+            if (!existing) {
+              merged.set(spot.id, spot);
+              continue;
+            }
+            const presentation = Object.fromEntries(
+              (spot.importedFields ?? []).map((field) => [field, spot[field as keyof FoodSpot]]),
+            );
+            merged.set(spot.id, {
+              ...existing,
+              ...presentation,
+              name: spot.name,
+              campus: spot.campus,
+              tier: spot.tier,
+              provenance: spot.provenance,
+              recommendReasons: spot.recommendReasons,
+              recommendedDishes: spot.recommendedDishes,
+              environmentPhotos: spot.environmentPhotos,
+              importedFields: spot.importedFields,
+            });
+          }
+          return [...merged.values()];
+        });
+        setRankings((current) => ({
+          ...Object.fromEntries(data.spots.map((spot) => [spot.id, spot.tier])),
+          ...current,
+        }));
+      })
+      .catch(() => undefined);
+  }, []);
+
+  useEffect(() => {
+    fetch("/api/food-rankings")
+      .then(async (response) => {
+        if (!response.ok) throw new Error("榜单加载失败");
+        return response.json() as Promise<{ rankings: Record<string, FoodSpot["tier"]>; canEdit: boolean; user: { displayName: string } | null }>;
+      })
+      .then((data) => {
+        setRankings((current) => ({ ...current, ...data.rankings }));
+        setCanEditRankings(data.canEdit);
+        setRankingUser(data.user?.displayName ?? null);
+        setRankingMessage(data.canEdit ? "管理员编辑模式：拖动商家卡片即可调整档位" : "游客只读模式：可以查看商家详情、评价与地点");
+      })
+      .catch(() => setRankingMessage("榜单暂时按默认顺序展示"));
+  }, []);
+
+  useEffect(() => {
+    setDetailTab("details");
+  }, [activeSpot.id]);
+
+  useEffect(() => {
+    fetch("/api/food-votes")
+      .then(async (response) => {
+        if (!response.ok) throw new Error("投票加载失败");
+        return response.json() as Promise<{ votes: VoteState; canVote: boolean }>;
+      })
+      .then((data) => {
+        setVotes(data.votes);
+        setCanVote(data.canVote);
+        setVoteMessage(data.canVote ? "每人每个地点一票，随时可以改票" : "登录后可以参与投票");
+      })
+      .catch(() => setVoteMessage("暂时无法加载投票"));
+  }, []);
 
   const visibleSpots = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -154,6 +288,54 @@ export default function Home() {
       return campusMatch && (!q || text.includes(q));
     });
   }, [campus, query]);
+
+  function spotTier(spot: FoodSpot) {
+    return rankings[spot.id] ?? spot.tier;
+  }
+
+  async function moveSpot(spotId: string, nextTier: FoodSpot["tier"]) {
+    if (!canEditRankings) return;
+    const previousTier = rankings[spotId];
+    setRankings((current) => ({ ...current, [spotId]: nextTier }));
+    setRankingMessage("正在保存调整…");
+
+    try {
+      const response = await fetch("/api/food-rankings", {
+        method: "PATCH",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ spotId, tier: nextTier, position: 0 }),
+      });
+      if (!response.ok) throw new Error("保存失败");
+      setRankingMessage(`已保存：${foodSpots.find((spot) => spot.id === spotId)?.name ?? "商家"} → ${nextTier}`);
+    } catch {
+      setRankings((current) => ({ ...current, [spotId]: previousTier }));
+      setRankingMessage("调整没有保存，请确认管理员权限后重试");
+    }
+  }
+
+  async function castVote(spotId: string, verdict: VoteVerdict) {
+    if (!canVote) return;
+    setVoteMessage("正在提交你的看法…");
+    try {
+      const response = await fetch("/api/food-votes", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ spotId, verdict }),
+      });
+      if (!response.ok) throw new Error("投票失败");
+      const data = await response.json() as { votes: VoteState };
+      setVotes(data.votes);
+      setVoteMessage("已记录，你可以随时改票");
+    } catch {
+      setVoteMessage("投票没有提交成功，请稍后重试");
+    }
+  }
+
+  const activeVote = votes[activeSpot.id] ?? {
+    counts: { underrated: 0, fair: 0, overrated: 0 },
+    current: null,
+  };
+  const activeVoteTotal = activeVote.counts.underrated + activeVote.counts.fair + activeVote.counts.overrated;
 
   function toggleSaved(id: string) {
     setSaved((current) => current.includes(id) ? current.filter((item) => item !== id) : [...current, id]);
@@ -236,7 +418,57 @@ export default function Home() {
           <label className="search"><span>⌕</span><input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="搜夜市、食堂或口味" /></label>
         </div>
 
-        <div className="map-layout">
+        <div className="ranking-status">
+          <span className={canEditRankings ? "admin-dot" : "visitor-dot"} />
+          <strong>{canEditRankings ? "管理员" : "普通游客"}</strong>
+          <p>{rankingMessage}</p>
+          {rankingUser && <small>{rankingUser}</small>}
+        </div>
+
+        <div className={`tier-board ${canEditRankings ? "editable" : "readonly"}`} aria-label="五档美食排行榜">
+          {foodTiers.map((item) => {
+            const tierSpots = foodSpots.filter((spot) => spotTier(spot) === item.name);
+            return (
+              <section
+                className={`tier-row ${item.className}`}
+                key={item.name}
+                onDragOver={(event) => { if (canEditRankings) event.preventDefault(); }}
+                onDrop={(event) => {
+                  if (!canEditRankings) return;
+                  event.preventDefault();
+                  const spotId = event.dataTransfer.getData("text/plain");
+                  if (spotId) void moveSpot(spotId, item.name);
+                }}
+              >
+                <div className="tier-label"><strong>{item.name}</strong><span>{item.note}</span></div>
+                <div className="tier-dropzone">
+                  {tierSpots.map((spot) => (
+                    <button
+                      className="ranking-card"
+                      key={spot.id}
+                      draggable={canEditRankings}
+                      onDragStart={(event) => {
+                        if (!canEditRankings) return;
+                        event.dataTransfer.setData("text/plain", spot.id);
+                        event.dataTransfer.effectAllowed = "move";
+                      }}
+                      onClick={() => setActiveSpot(spot)}
+                      aria-label={`${spot.name}，${item.name}档，查看详情`}
+                    >
+                      <img src={spot.image} alt="" />
+                      <span><strong>{spot.name}</strong><small>{spot.campus} · {spot.price}</small></span>
+                      {canEditRankings && <i aria-hidden="true">⠿</i>}
+                    </button>
+                  ))}
+                  {!tierSpots.length && <span className="empty-tier">拖到这里</span>}
+                </div>
+              </section>
+            );
+          })}
+        </div>
+        <p className="tier-note">五档整活榜 · 普通游客只读；管理员的拖动调整会保存到榜单。分档仅代表攻略编辑视角，欢迎实地吃过以后来“抬杠”。</p>
+
+        <div className="map-layout" id="food-map">
           <div className="map-panel">
             <iframe title={`${activeSpot.name}真实地图`} src={activeSpot.map} loading="lazy" referrerPolicy="no-referrer" />
             <div className="map-overlay">
@@ -257,23 +489,76 @@ export default function Home() {
                     <span className="tags">{spot.tags.map((tag) => <i key={tag}>{tag}</i>)}</span>
                   </span>
                 </button>
+                <span className={`tier-badge ${foodTiers.find((item) => item.name === spotTier(spot))?.className}`}>{spotTier(spot)}</span>
                 <button className={`save ${saved.includes(spot.id) ? "saved" : ""}`} onClick={() => toggleSaved(spot.id)} aria-label={saved.includes(spot.id) ? `取消收藏${spot.name}` : `收藏${spot.name}`}>{saved.includes(spot.id) ? "♥" : "♡"}</button>
               </article>
             )) : <div className="empty-state"><strong>没找到对应地点</strong><p>换一个校区或关键词试试。</p></div>}
           </div>
         </div>
 
-        <div className="spot-detail">
-          <div><span className="detail-label">攻略点评</span><p>{activeSpot.review}</p></div>
-          <dl><div><dt>地址</dt><dd>{activeSpot.address}</dd></div><div><dt>营业参考</dt><dd>{activeSpot.hours}</dd></div><div><dt>资料状态</dt><dd>{activeSpot.verified ? "公开信息已核对" : "等待学生实地核验"}</dd></div></dl>
+        <div className="detail-subnav" role="tablist" aria-label="商家二级菜单">
+          <div><strong>{activeSpot.name}</strong><small>{spotTier(activeSpot)}档</small></div>
+          <button role="tab" aria-selected={detailTab === "details"} className={detailTab === "details" ? "active" : ""} onClick={() => setDetailTab("details")}>商家详情</button>
+          <button role="tab" aria-selected={detailTab === "votes"} className={detailTab === "votes" ? "active" : ""} onClick={() => setDetailTab("votes")}>学生评分 <span>{activeVoteTotal}</span></button>
         </div>
+
+        {detailTab === "details" ? (
+          <div className="detail-panel" role="tabpanel">
+            <div className="spot-detail">
+              <div><span className="detail-label">{spotTier(activeSpot)}档 · 攻略点评</span><p>{activeSpot.review}</p></div>
+              <dl><div><dt>地址</dt><dd>{activeSpot.address}</dd></div><div><dt>营业参考</dt><dd>{activeSpot.hours}</dd></div><div><dt>资料状态</dt><dd>{activeSpot.verified ? "公开信息已核对" : "等待学生实地核验"}</dd></div><div><dt>数据来源</dt><dd>{activeSpot.provenance ? <><a href={activeSpot.provenance.url} target="_blank" rel="noreferrer">{activeSpot.provenance.name} ↗</a><small>核验于 {activeSpot.provenance.checkedAt}</small></> : "等待补充"}</dd></div></dl>
+            </div>
+            <div className="recommendation-detail">
+              <section className="reason-list">
+                <span className="detail-label">WHY WE PICKED IT</span>
+                <h3>为什么推荐</h3>
+                <ol>{activeSpot.recommendReasons?.map((reason, index) => <li key={reason}><span>0{index + 1}</span>{reason}</li>)}</ol>
+              </section>
+              <section className="dish-gallery">
+                <div><span className="detail-label">WHAT TO ORDER</span><h3>推荐菜品</h3></div>
+                <div className="media-cards">{activeSpot.recommendedDishes?.map((dish) => <article key={dish.name}><img src={dish.image} alt={`${activeSpot.name}的${dish.name}参考图`} /><div><strong>{dish.name}</strong><p>{dish.note}</p></div></article>)}</div>
+              </section>
+              <section className="environment-gallery">
+                <div><span className="detail-label">THE VIBE</span><h3>店里环境</h3></div>
+                <div className="environment-media">{activeSpot.environmentPhotos?.map((photo) => <figure key={photo.label}><img src={photo.image} alt={photo.label} /><figcaption>{photo.label}</figcaption></figure>)}</div>
+              </section>
+            </div>
+          </div>
+        ) : (
+          <div className="community-vote" role="tabpanel">
+            <div className="vote-copy">
+              <span className="detail-label">COMMUNITY CHECK</span>
+              <h3>这个档位，大家服不服？</h3>
+              <p>{activeVoteTotal ? `已有 ${activeVoteTotal} 人参与纠偏。管理员负责排榜，大家负责指出它被低估了，还是有点虚高。` : "还没有人投票，你可以成为第一个给出判断的人。"}</p>
+              <small>{voteMessage}</small>
+            </div>
+            <div className="vote-options">
+              {([
+                { value: "underrated", label: "被低估了", hint: "应该往上抬" },
+                { value: "fair", label: "基本合理", hint: "这个档位合适" },
+                { value: "overrated", label: "有点虚高", hint: "应该往下放" },
+              ] as const).map((option) => (
+                <button
+                  className={`${option.value} ${activeVote.current === option.value ? "selected" : ""}`}
+                  key={option.value}
+                  disabled={!canVote}
+                  onClick={() => void castVote(activeSpot.id, option.value)}
+                >
+                  <span><strong>{option.label}</strong><small>{option.hint}</small></span>
+                  <b>{activeVote.counts[option.value]}</b>
+                </button>
+              ))}
+              {!canVote && <a className="vote-signin" href="/signin-with-chatgpt?return_to=%2F%23food">登录后参与投票 →</a>}
+            </div>
+          </div>
+        )}
         <p className="photo-note">图片为真实菜品氛围图，不代表具体商家出品；营业时间、价格与门店状态可能变化，请以地图和现场信息为准。</p>
       </section>
 
       <section className="section tools-section" id="tools">
         <div className="section-heading">
-          <div><span className="kicker">OPEN SOURCE TOOLBOX</span><h2>别重复造轮子，<br />学长姐已经做了。</h2></div>
-          <p>原 HENU-Kit 仓库里的校园工具与资料入口，保留独立维护方式，网站只做清晰、可信的导航。</p>
+          <div><span className="kicker">CAMPUS TOOLBOX</span><h2>可以看看这些，<br />也许正好对你有用。</h2></div>
+          <p>这里收集了学长姐维护的校园工具和资料。需要的时候点开看看，不需要也没关系，先知道它们在这里就好。</p>
         </div>
         <div className="tools-grid">
           {tools.map((tool, index) => (
