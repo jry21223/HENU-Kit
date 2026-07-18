@@ -1,0 +1,58 @@
+name: 报告网站问题
+description: 页面打不开、按钮失效、地图错误或手机显示异常时使用
+title: "[网站问题] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: 谢谢你帮助改进网站。请描述你看到的现象；不知道技术名词也没关系。
+  - type: dropdown
+    id: problem_type
+    attributes:
+      label: 遇到了什么问题？
+      options:
+        - 页面无法打开或一直加载
+        - 按钮、搜索或筛选无法使用
+        - 地图或导航不正确
+        - 图片无法显示
+        - 手机或电脑排版异常
+        - 投票或榜单功能异常
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题描述
+      placeholder: 我打开……，点击……之后，页面出现了……
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 怎样可以再次遇到这个问题？
+      placeholder: |
+        1. 打开……
+        2. 点击……
+        3. 出现……
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: 使用的设备和浏览器
+      placeholder: 例如：小米 15 / 微信内置浏览器，Windows 11 / Chrome
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: 截图或补充信息
+      description: 可直接拖入截图；请先遮住姓名、账号、学号等个人信息。
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 隐私确认
+      options:
+        - label: 截图和描述中不包含账号、Token、学号等敏感信息。
+          required: true

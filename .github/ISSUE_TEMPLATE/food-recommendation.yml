@@ -1,0 +1,66 @@
+name: 推荐一家美食商家
+description: 分享学校附近值得收录的餐馆、窗口、摊位或夜市
+title: "[美食推荐] "
+labels: ["content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        谢谢你帮新生找到好吃的！不需要写得很正式，提供你亲自体验过的信息即可。
+        请不要填写店主或员工的私人手机号、微信等非公开个人信息。
+  - type: input
+    id: name
+    attributes:
+      label: 商家名称
+      placeholder: 例如：金明校区南苑餐厅二楼某窗口
+    validations:
+      required: true
+  - type: dropdown
+    id: campus
+    attributes:
+      label: 靠近哪个校区？
+      options: [明伦校区, 金明校区, 龙子湖校区, 其他或不确定]
+    validations:
+      required: true
+  - type: input
+    id: address
+    attributes:
+      label: 具体位置
+      description: 可以填写地址、楼层、窗口号，或地图公开链接。
+      placeholder: 例如：南苑餐厅二楼东侧；https://...
+    validations:
+      required: true
+  - type: textarea
+    id: reasons
+    attributes:
+      label: 为什么推荐？
+      description: 可以说说味道、价格、分量、距离、排队和适合什么场景。
+      placeholder: 人均约 20 元，分量很足，晚课后还能吃到……
+    validations:
+      required: true
+  - type: textarea
+    id: dishes
+    attributes:
+      label: 推荐菜品
+      placeholder: 菜名、参考价格，以及你觉得值得点的原因
+    validations:
+      required: true
+  - type: textarea
+    id: photos
+    attributes:
+      label: 菜品和环境照片
+      description: 可直接拖入自己拍摄的照片。请勿上传隐私信息或未经许可转载的图片。
+  - type: input
+    id: visited_at
+    attributes:
+      label: 最近一次到店时间
+      placeholder: 例如：2026 年 7 月
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: 提交确认
+      options:
+        - label: 内容来自我的真实体验，且没有包含他人的敏感个人信息。
+          required: true
