@@ -1,0 +1,36 @@
+{
+  "college": "数学与统计学院",
+  "snapshot_date": "2026-07-17",
+  "notices": [
+    {
+      "id": "2026-teacher-skill",
+      "title": "河南大学2026年本科师范生教学技能比赛",
+      "published_date": "2026-06-30",
+      "source_url": "https://jwc.henu.edu.cn/info/2357/22373.htm",
+      "extraction_status": "list_extracted",
+      "mapping_basis": "teacher_training_relevance",
+      "can_replace_full_content": false,
+      "source_list_url": "https://jwc.henu.edu.cn/"
+    },
+    {
+      "id": "2026-ccf-csp-42",
+      "title": "第42次CCF CSP认证",
+      "published_date": "2026-04-29",
+      "source_url": "https://jwc.henu.edu.cn/info/2357/21993.htm",
+      "extraction_status": "list_extracted",
+      "mapping_basis": "discipline_relevance",
+      "can_replace_full_content": false,
+      "source_list_url": "https://jwc.henu.edu.cn/tzgg.htm"
+    },
+    {
+      "id": "2026-enterprise-simulation",
+      "title": "2026年全国企业竞争模拟大赛河南大学校级选拔赛",
+      "published_date": "2026-03-16",
+      "source_url": "https://jwc.henu.edu.cn/info/2357/21563.htm",
+      "extraction_status": "list_extracted",
+      "mapping_basis": "discipline_relevance",
+      "can_replace_full_content": false,
+      "source_list_url": "https://jwc.henu.edu.cn/tzgg/32.htm"
+    }
+  ]
+}

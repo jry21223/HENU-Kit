@@ -1,0 +1,16 @@
+{
+  "college": "国际教育学院（丝绸之路学院）",
+  "snapshot_date": "2026-07-17",
+  "notices": [
+    {
+      "id": "2026-classics",
+      "title": "河南大学2026年中华经典诵写讲大赛",
+      "published_date": "2026-06-16",
+      "source_url": "https://jwc.henu.edu.cn/info/2357/22303.htm",
+      "extraction_status": "list_extracted",
+      "mapping_basis": "discipline_relevance",
+      "can_replace_full_content": false,
+      "source_list_url": "https://jwc.henu.edu.cn/"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "project": "HENUKit",
+  "snapshot_date": "2026-07-17",
+  "college_name": "药学院",
+  "category": "医学科学类",
+  "official_url": "https://yxy.henu.edu.cn",
+  "folder_status": "initialized",
+  "source_priority": [
+    "college_official_site",
+    "henu_jwc",
+    "henu_student_affairs"
+  ],
+  "notes": "竞赛映射中，official_* 为官方来源；discipline_relevance 为HENUKit专业相关性映射，不等同于学院认定目录。"
+}
