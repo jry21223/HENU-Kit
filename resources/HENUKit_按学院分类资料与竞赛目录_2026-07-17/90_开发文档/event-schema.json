@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HENUKit Document Event",
+  "type": "object",
+  "required": [
+    "specversion",
+    "id",
+    "source",
+    "type",
+    "time",
+    "data"
+  ],
+  "properties": {
+    "specversion": {
+      "const": "1.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 8
+    },
+    "source": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "time": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "datacontenttype": {
+      "const": "application/json"
+    },
+    "data": {
+      "type": "object",
+      "required": [
+        "document_id",
+        "extraction_status"
+      ],
+      "properties": {
+        "document_id": {
+          "type": "string"
+        },
+        "previous_version_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "current_version_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "candidate_version_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "policy_family_key": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "extraction_status": {
+          "type": "string"
+        },
+        "reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "confidence": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    }
+  }
+}

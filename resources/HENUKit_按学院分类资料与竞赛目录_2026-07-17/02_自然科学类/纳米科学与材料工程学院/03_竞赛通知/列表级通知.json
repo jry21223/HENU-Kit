@@ -1,0 +1,36 @@
+{
+  "college": "纳米科学与材料工程学院",
+  "snapshot_date": "2026-07-17",
+  "notices": [
+    {
+      "id": "2026-intelligent-tech",
+      "title": "第八届全国大学生智能技术应用大赛河南大学校级选拔赛",
+      "published_date": "2026-06-29",
+      "source_url": "https://jwc.henu.edu.cn/info/2357/22333.htm",
+      "extraction_status": "list_extracted",
+      "mapping_basis": "discipline_relevance",
+      "can_replace_full_content": false,
+      "source_list_url": "https://jwc.henu.edu.cn/"
+    },
+    {
+      "id": "2026-robot",
+      "title": "第十二届河南省大学生机器人竞赛河南大学校赛",
+      "published_date": "2026-04-20",
+      "source_url": "https://jwc.henu.edu.cn/info/2357/21923.htm",
+      "extraction_status": "list_extracted",
+      "mapping_basis": "discipline_relevance",
+      "can_replace_full_content": false,
+      "source_list_url": "https://jwc.henu.edu.cn/tzgg.htm"
+    },
+    {
+      "id": "2026-physics-experiment",
+      "title": "河南大学第八届大学生物理实验竞赛（创新）",
+      "published_date": "2026-03-11",
+      "source_url": "https://jwc.henu.edu.cn/info/2357/21543.htm",
+      "extraction_status": "list_extracted",
+      "mapping_basis": "discipline_relevance",
+      "can_replace_full_content": false,
+      "source_list_url": "https://jwc.henu.edu.cn/tzgg/32.htm"
+    }
+  ]
+}

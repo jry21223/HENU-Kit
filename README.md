@@ -40,6 +40,7 @@
 |---|---|---|---|
 | HENU Assistant | [`jry21223/HENU_Assistant`](https://github.com/jry21223/HENU_Assistant) | 校园服务助手，面向课表、空教室、图书馆、请假、选课等校园服务场景 | 核心项目 |
 | HENU Final Review | [`jry21223/HENU-Final-Review`](https://github.com/jry21223/HENU-Final-Review) | 期末复习、刷题、模拟卷、答案解析与复习资料整理 | 学习工具 |
+| HENUKit 学院资料与竞赛目录 | [`resources/HENUKit_按学院分类资料与竞赛目录_2026-07-17`](./resources/HENUKit_%E6%8C%89%E5%AD%A6%E9%99%A2%E5%88%86%E7%B1%BB%E8%B5%84%E6%96%99%E4%B8%8E%E7%AB%9E%E8%B5%9B%E7%9B%AE%E5%BD%95_2026-07-17/) | 按学院整理河南大学公开通知、评选细则和竞赛目录的可追溯快照 | 公开资料 |
 | HENU-Autologin | [`jry21223/HENU-Autologin`](https://github.com/jry21223/HENU-Autologin) | 河南大学校园网自动登录工具 | 实用工具 |
 | HENU Library Auto Seat Book | [`jry21223/Henu_library_auto_seat_book`](https://github.com/jry21223/Henu_library_auto_seat_book) | 图书馆座位预约自动化工具 | 实用工具 |
 | HENU Survival Handbook | [`HENU-CS/SurvivalHandbook`](https://github.com/HENU-CS/SurvivalHandbook) | 河南大学生存手册与飞跃手册，整理校园生活、学习发展与升学出路相关经验 | 资料手册 |
@@ -54,6 +55,15 @@
 一劳永逸，功在千秋
 
 HENU-Kit 的目标不是做一个“大而全”的官方系统，而是把这些真实需求沉淀成一组可维护、可复用、可迭代的学生工具。
+
+## 公开资料快照
+
+本仓库收录一份经官网源链接核验的 [HENUKit 学院资料与竞赛目录](./resources/HENUKit_%E6%8C%89%E5%AD%A6%E9%99%A2%E5%88%86%E7%B1%BB%E8%B5%84%E6%96%99%E4%B8%8E%E7%AB%9E%E8%B5%9B%E7%9B%AE%E5%BD%95_2026-07-17/)。该快照标记日期为 2026-07-17，最近一次官网核验和目录修订日期为 2026-07-22。
+
+- 资料来源以河南大学官网正文和官方附件为准；条目保留 `source_url`、提取状态和版本关系。
+- 名单公示仅保留去标识化元数据，不复制姓名、学号等个人信息。
+- 竞赛正文以校级公共资料为 canonical 来源，学院目录中的同文内容用于离线导航，并通过 manifest 哈希校验。
+- 该资料包为学生维护的公开资料快照，不代表河南大学官方发布、官方命题或现行政策保证；使用时请回到条目中的官网链接确认最新版本。
 
 ---
 

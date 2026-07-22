@@ -1,0 +1,16 @@
+{
+  "college": "经济学院",
+  "snapshot_date": "2026-07-17",
+  "notices": [
+    {
+      "id": "2026-enterprise-simulation",
+      "title": "2026年全国企业竞争模拟大赛河南大学校级选拔赛",
+      "published_date": "2026-03-16",
+      "source_url": "https://jwc.henu.edu.cn/info/2357/21563.htm",
+      "extraction_status": "list_extracted",
+      "mapping_basis": "discipline_relevance",
+      "can_replace_full_content": false,
+      "source_list_url": "https://jwc.henu.edu.cn/tzgg/32.htm"
+    }
+  ]
+}

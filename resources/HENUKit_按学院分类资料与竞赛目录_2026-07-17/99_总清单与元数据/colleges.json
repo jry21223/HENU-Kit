@@ -1,0 +1,283 @@
+{
+  "project": "HENUKit",
+  "snapshot_date": "2026-07-17",
+  "count": 46,
+  "colleges": [
+    {
+      "category": "01_人文社科类",
+      "name": "文学院",
+      "official_url": "https://wxy.henu.edu.cn",
+      "folder": "01_人文社科类/文学院"
+    },
+    {
+      "category": "01_人文社科类",
+      "name": "历史文化学院",
+      "official_url": "https://lsxy.henu.edu.cn",
+      "folder": "01_人文社科类/历史文化学院"
+    },
+    {
+      "category": "01_人文社科类",
+      "name": "教育学部",
+      "official_url": "https://jykx.henu.edu.cn",
+      "folder": "01_人文社科类/教育学部"
+    },
+    {
+      "category": "01_人文社科类",
+      "name": "哲学与公共管理学院",
+      "official_url": "https://zgy.henu.edu.cn",
+      "folder": "01_人文社科类/哲学与公共管理学院"
+    },
+    {
+      "category": "01_人文社科类",
+      "name": "马克思主义学院",
+      "official_url": "https://marxism.henu.edu.cn",
+      "folder": "01_人文社科类/马克思主义学院"
+    },
+    {
+      "category": "01_人文社科类",
+      "name": "法学院（知识产权学院）",
+      "official_url": "https://fxy.henu.edu.cn",
+      "folder": "01_人文社科类/法学院（知识产权学院）"
+    },
+    {
+      "category": "01_人文社科类",
+      "name": "纪检监察学院",
+      "official_url": "https://jjjcxy.henu.edu.cn",
+      "folder": "01_人文社科类/纪检监察学院"
+    },
+    {
+      "category": "01_人文社科类",
+      "name": "经济学院",
+      "official_url": "https://jjxy.henu.edu.cn",
+      "folder": "01_人文社科类/经济学院"
+    },
+    {
+      "category": "01_人文社科类",
+      "name": "商学院",
+      "official_url": "https://sba.henu.edu.cn",
+      "folder": "01_人文社科类/商学院"
+    },
+    {
+      "category": "01_人文社科类",
+      "name": "高级金融学院",
+      "official_url": "https://aif.henu.edu.cn",
+      "folder": "01_人文社科类/高级金融学院"
+    },
+    {
+      "category": "01_人文社科类",
+      "name": "新闻与传播学院／出版学院",
+      "official_url": "https://hdxc.henu.edu.cn",
+      "folder": "01_人文社科类/新闻与传播学院／出版学院"
+    },
+    {
+      "category": "01_人文社科类",
+      "name": "文化旅游学院",
+      "official_url": "https://wlxy.henu.edu.cn",
+      "folder": "01_人文社科类/文化旅游学院"
+    },
+    {
+      "category": "01_人文社科类",
+      "name": "外语学院（高级翻译学院）",
+      "official_url": "https://wy.henu.edu.cn",
+      "folder": "01_人文社科类/外语学院（高级翻译学院）"
+    },
+    {
+      "category": "01_人文社科类",
+      "name": "体育学院（体委办公室）",
+      "official_url": "https://tyxy.henu.edu.cn",
+      "folder": "01_人文社科类/体育学院（体委办公室）"
+    },
+    {
+      "category": "01_人文社科类",
+      "name": "武术学院",
+      "official_url": "https://wsxy.henu.edu.cn",
+      "folder": "01_人文社科类/武术学院"
+    },
+    {
+      "category": "01_人文社科类",
+      "name": "音乐学院",
+      "official_url": "https://cm.henu.edu.cn",
+      "folder": "01_人文社科类/音乐学院"
+    },
+    {
+      "category": "01_人文社科类",
+      "name": "美术学院",
+      "official_url": "https://msxy.henu.edu.cn",
+      "folder": "01_人文社科类/美术学院"
+    },
+    {
+      "category": "01_人文社科类",
+      "name": "大学外语教研部",
+      "official_url": "https://wyb.henu.edu.cn",
+      "folder": "01_人文社科类/大学外语教研部"
+    },
+    {
+      "category": "02_自然科学类",
+      "name": "数学与统计学院",
+      "official_url": "https://maths.henu.edu.cn",
+      "folder": "02_自然科学类/数学与统计学院"
+    },
+    {
+      "category": "02_自然科学类",
+      "name": "物理与电子学院",
+      "official_url": "https://phye.henu.edu.cn",
+      "folder": "02_自然科学类/物理与电子学院"
+    },
+    {
+      "category": "02_自然科学类",
+      "name": "化学与分子科学学院",
+      "official_url": "https://ccce.henu.edu.cn",
+      "folder": "02_自然科学类/化学与分子科学学院"
+    },
+    {
+      "category": "02_自然科学类",
+      "name": "纳米科学与材料工程学院",
+      "official_url": "https://lab.henu.edu.cn",
+      "folder": "02_自然科学类/纳米科学与材料工程学院"
+    },
+    {
+      "category": "02_自然科学类",
+      "name": "地理科学与工程学部",
+      "official_url": "https://fgse.henu.edu.cn",
+      "folder": "02_自然科学类/地理科学与工程学部"
+    },
+    {
+      "category": "02_自然科学类",
+      "name": "生命科学学院",
+      "official_url": "https://bio.henu.edu.cn",
+      "folder": "02_自然科学类/生命科学学院"
+    },
+    {
+      "category": "02_自然科学类",
+      "name": "农学院",
+      "official_url": "https://nxy.henu.edu.cn",
+      "folder": "02_自然科学类/农学院"
+    },
+    {
+      "category": "03_工程技术类",
+      "name": "新能源与智能制造学院",
+      "official_url": "https://energy.henu.edu.cn",
+      "folder": "03_工程技术类/新能源与智能制造学院"
+    },
+    {
+      "category": "03_工程技术类",
+      "name": "柔性电子学院",
+      "official_url": "https://sofe.henu.edu.cn",
+      "folder": "03_工程技术类/柔性电子学院"
+    },
+    {
+      "category": "03_工程技术类",
+      "name": "计算机与信息工程学院",
+      "official_url": "https://cs.henu.edu.cn",
+      "folder": "03_工程技术类/计算机与信息工程学院"
+    },
+    {
+      "category": "03_工程技术类",
+      "name": "软件学院",
+      "official_url": "https://software.henu.edu.cn",
+      "folder": "03_工程技术类/软件学院"
+    },
+    {
+      "category": "03_工程技术类",
+      "name": "人工智能学院",
+      "official_url": "https://ai.henu.edu.cn",
+      "folder": "03_工程技术类/人工智能学院"
+    },
+    {
+      "category": "03_工程技术类",
+      "name": "建筑工程学院",
+      "official_url": "https://tujian.henu.edu.cn",
+      "folder": "03_工程技术类/建筑工程学院"
+    },
+    {
+      "category": "03_工程技术类",
+      "name": "未来技术学院",
+      "official_url": "https://future.henu.edu.cn",
+      "folder": "03_工程技术类/未来技术学院"
+    },
+    {
+      "category": "03_工程技术类",
+      "name": "合成生物与制药工程学院（筹）",
+      "official_url": "https://ktyw.henu.edu.cn",
+      "folder": "03_工程技术类/合成生物与制药工程学院（筹）"
+    },
+    {
+      "category": "03_工程技术类",
+      "name": "低空技术与空天信息学院（筹）",
+      "official_url": null,
+      "folder": "03_工程技术类/低空技术与空天信息学院（筹）"
+    },
+    {
+      "category": "04_医学科学类",
+      "name": "医学院",
+      "official_url": "https://med.henu.edu.cn",
+      "folder": "04_医学科学类/医学院"
+    },
+    {
+      "category": "04_医学科学类",
+      "name": "基础医学院",
+      "official_url": "https://bms.henu.edu.cn",
+      "folder": "04_医学科学类/基础医学院"
+    },
+    {
+      "category": "04_医学科学类",
+      "name": "药学院",
+      "official_url": "https://yxy.henu.edu.cn",
+      "folder": "04_医学科学类/药学院"
+    },
+    {
+      "category": "04_医学科学类",
+      "name": "护理与健康学院",
+      "official_url": "https://hlyjkxy.henu.edu.cn",
+      "folder": "04_医学科学类/护理与健康学院"
+    },
+    {
+      "category": "04_医学科学类",
+      "name": "第一临床医学院（第一附属医院）",
+      "official_url": "https://www.hdyfy.cn",
+      "folder": "04_医学科学类/第一临床医学院（第一附属医院）"
+    },
+    {
+      "category": "04_医学科学类",
+      "name": "第二临床医学院（淮河医院）",
+      "official_url": "https://www.huaihe.com.cn",
+      "folder": "04_医学科学类/第二临床医学院（淮河医院）"
+    },
+    {
+      "category": "04_医学科学类",
+      "name": "河南省人民医院培养单位",
+      "official_url": "https://www.hnsrmyy.net",
+      "folder": "04_医学科学类/河南省人民医院培养单位"
+    },
+    {
+      "category": "04_医学科学类",
+      "name": "口腔医学院",
+      "official_url": "https://henuss.henu.edu.cn",
+      "folder": "04_医学科学类/口腔医学院"
+    },
+    {
+      "category": "05_国际合作类",
+      "name": "国际教育学院（丝绸之路学院）",
+      "official_url": "https://dwhy.henu.edu.cn",
+      "folder": "05_国际合作类/国际教育学院（丝绸之路学院）"
+    },
+    {
+      "category": "05_国际合作类",
+      "name": "阿斯顿国际学院（原迈阿密学院）",
+      "official_url": "https://aiihu.henu.edu.cn",
+      "folder": "05_国际合作类/阿斯顿国际学院（原迈阿密学院）"
+    },
+    {
+      "category": "05_国际合作类",
+      "name": "欧亚国际学院",
+      "official_url": "https://oy.henu.edu.cn",
+      "folder": "05_国际合作类/欧亚国际学院"
+    },
+    {
+      "category": "05_国际合作类",
+      "name": "国际（欧美）理工学院",
+      "official_url": "https://ist.henu.edu.cn",
+      "folder": "05_国际合作类/国际（欧美）理工学院"
+    }
+  ]
+}

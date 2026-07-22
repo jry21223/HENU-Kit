@@ -1,0 +1,33 @@
+project: HENUKit
+snapshot_date: 2026-07-17
+sources:
+  - key: henu_jwc_notices
+    name: 河南大学教务处通知公告
+    base_url: https://jwc.henu.edu.cn
+    list_url: https://jwc.henu.edu.cn/tzgg.htm
+    adapter: henu_vsb_list_detail
+    interval_minutes: 20
+    max_concurrency: 1
+    min_request_interval_ms: 1500
+    categories: [academic, competition, innovation]
+
+  - key: henu_student_affairs
+    name: 河南大学学生处通知公告
+    base_url: https://stu.henu.edu.cn
+    list_url: https://stu.henu.edu.cn/index/tzgg.htm
+    adapter: henu_vsb_list_detail
+    interval_minutes: 30
+    max_concurrency: 1
+    min_request_interval_ms: 1500
+    categories: [student_affairs, scholarship, student_aid]
+
+  - key: henu_software
+    name: 河南大学软件学院
+    base_url: https://software.henu.edu.cn
+    list_url: https://software.henu.edu.cn/
+    adapter: henu_vsb_list_detail_with_405_fallback
+    interval_minutes: 60
+    max_concurrency: 1
+    min_request_interval_ms: 2000
+    on_detail_405: create_manual_review
+    categories: [college_notice, scholarship, award_review, competition]
