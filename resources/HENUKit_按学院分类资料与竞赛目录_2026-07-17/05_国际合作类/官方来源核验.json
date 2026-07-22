@@ -1,0 +1,49 @@
+{
+  "category": "国际合作类",
+  "verified_date": "2026-07-23",
+  "source_policy": "只记录河南大学或学院官网已核验来源；研究生专属材料不作为本科规则使用。",
+  "colleges": {
+    "国际教育学院（丝绸之路学院）": {
+      "official_entry": "https://dwhy.henu.edu.cn/",
+      "search_scope": ["https://dwhy.henu.edu.cn/", "https://dwhy.henu.edu.cn/xyxw/tzgg.htm", "https://jwc.henu.edu.cn/tzgg.htm"],
+      "detail_sources": [
+        {"title": "关于2025-2026学年度河南省政府奖学金及河南大学奖学金国际生年度评审通知", "published_date": "2025-06-01", "source_url": "https://dwhy.henu.edu.cn/info/1275/5248.htm", "retrieved_or_verified_date": "2026-07-23", "extraction_status": "metadata_only", "version_status": "current_cycle_2025_2026", "notes": "面向国际学生，正文明确含本科生评审条件；不等同于普通本科生奖学金规则。"}
+      ],
+      "competition_sources": [
+        {"title": "学院师生参加2025年中国（安阳）国际汉字大会并在国际学生演讲大赛中创佳绩", "published_date": "2025-04-24", "source_url": "https://dwhy.henu.edu.cn/info/1274/5038.htm", "retrieved_or_verified_date": "2026-07-23", "extraction_status": "metadata_only", "version_status": "historical_undergraduate_competition", "notes": "报道明确指出参赛者为汉语国际教育专业本科生；历史赛事，不作为2026报名通知。"}
+      ],
+      "pending_reason": "普通本科生推免、综合测评和评先奖优细则未发现；国际学生奖学金仅按其适用对象记录。"
+    },
+    "国际（欧美）理工学院": {
+      "official_entry": "https://ist.henu.edu.cn/",
+      "search_scope": ["https://ist.henu.edu.cn/", "https://ist.henu.edu.cn/nav_words_list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1611", "https://jwc.henu.edu.cn/tzgg.htm"],
+      "detail_sources": [
+        {"title": "国际（欧美）理工学院全日制普通本科生综合素质测评实施细则（暂行）", "published_date": "2026-06-25", "source_url": "https://ist.henu.edu.cn/info/1611/27938.htm", "retrieved_or_verified_date": "2026-07-23", "extraction_status": "metadata_only", "version_status": "current_2026", "notes": "标题明确为全日制普通本科生，可作为本科综合测评来源；本次不重写正文。"},
+        {"title": "国际（欧美）理工学院推荐免试硕士研究生工作实施细则（暂行）", "published_date": "2026-06-25", "source_url": "https://ist.henu.edu.cn/info/1611/27928.htm", "retrieved_or_verified_date": "2026-07-23", "extraction_status": "metadata_only", "version_status": "not_undergraduate_rule", "notes": "研究生推免工作细则，不作为本科规则。"}
+      ],
+      "competition_sources": [
+        {"title": "关于组织学生参加2026年美国大学生数学建模竞赛的通知", "published_date": "2026-01-22", "source_url": "https://ist.henu.edu.cn/info/1611/26088.htm", "retrieved_or_verified_date": "2026-07-23", "extraction_status": "full_structured_extract", "version_status": "current_cycle_2026", "notes": "正文明确面向国际理工学院全体学生，记录为学院竞赛来源。"},
+        {"title": "2026年“挑战杯”大学生创业计划竞赛国际理工学院初赛顺利举办", "published_date": "2025-11-30", "source_url": "https://ist.henu.edu.cn/info/1801/25738.htm", "retrieved_or_verified_date": "2026-07-23", "extraction_status": "metadata_only", "version_status": "current_cycle_2026", "notes": "学院初赛报道；未据报道内容补写报名规则。"}
+      ],
+      "pending_reason": "本科综合测评已有官方标题来源；本科奖学金和评先奖优完整细则仍未取得。"
+    },
+    "欧亚国际学院": {
+      "official_entry": "https://oy.henu.edu.cn/",
+      "search_scope": ["https://oy.henu.edu.cn/", "https://jwc.henu.edu.cn/tzgg.htm", "https://stu.henu.edu.cn/"],
+      "detail_sources": [
+        {"title": "欧亚国际学院2024—2025学年本科生评先奖优通知", "published_date": "2025-10-23", "source_url": "https://oy.henu.edu.cn/info/1605/20402.htm", "retrieved_or_verified_date": "2026-07-23", "extraction_status": "metadata_only", "version_status": "historical_academic_year_2024_2025", "notes": "正文明确面向全日制本科生；记录为上一学年官方方案，不宣称为2026现行规则。"}
+      ],
+      "competition_sources": [
+        {"title": "关于举办河南大学2026年“挑战杯”大学生创业计划竞赛欧亚国际学院院赛的通知", "published_date": "2025-10-11", "source_url": "https://oy.henu.edu.cn/info/1605/20292.htm", "retrieved_or_verified_date": "2026-07-23", "extraction_status": "full_structured_extract", "version_status": "current_cycle_2026", "notes": "正文明确参赛对象为全日制在校本科生。"}
+      ],
+      "pending_reason": "本科评先奖优已有上一学年官方方案；未发现2026学年同类完整细则，保留待补提示。"
+    },
+    "阿斯顿国际学院（原迈阿密学院）": {
+      "official_entry": "https://aiihu.henu.edu.cn/",
+      "search_scope": ["https://aiihu.henu.edu.cn/", "https://jwc.henu.edu.cn/tzgg.htm", "https://stu.henu.edu.cn/"],
+      "detail_sources": [],
+      "competition_sources": [],
+      "pending_reason": "已确认学院官网入口，但本轮未找到可核验的本科生细则、竞赛报名通知或官方附件；保留待补，避免用其他国际学院材料代替。"
+    }
+  }
+}

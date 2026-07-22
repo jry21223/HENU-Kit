@@ -1,0 +1,83 @@
+{
+  "category": "医学科学类",
+  "verified_date": "2026-07-23",
+  "source_policy": "只记录河南大学或学院官网已核验来源；研究生专属材料不作为本科规则使用。",
+  "colleges": {
+    "医学院": {
+      "official_entry": "https://med.henu.edu.cn/",
+      "search_scope": ["https://med.henu.edu.cn/", "https://jwc.henu.edu.cn/tzgg.htm", "https://stu.henu.edu.cn/"],
+      "detail_sources": [
+        {"title": "河南大学医学院2026年接收推荐免试研究生工作实施", "published_date": "2025-09-18", "source_url": "https://med.henu.edu.cn/__local/4/90/32/F22523502611E9572E9299128A7_4D26EDFE_1D8CD.pdf", "retrieved_or_verified_date": "2026-07-23", "extraction_status": "metadata_only", "version_status": "not_undergraduate_rule", "notes": "研究生接收规则，不纳入本科推免/评优细则。"},
+        {"title": "医学院2023-2024学年本科生评先奖优拟获奖个人、集体公示名单", "published_date": "2024-11-08", "source_url": "https://med.henu.edu.cn/info/2090/6138.htm", "retrieved_or_verified_date": "2026-07-23", "extraction_status": "official_index_only", "version_status": "historical_public_notice", "notes": "官网历史索引来源；详情 URL 于核验日返回404，不复制个人名单，不替代评选细则。"}
+      ],
+      "competition_sources": [
+        {"title": "医学院成功举办2026年“挑战杯”大学生创业计划竞赛", "published_date": "2025-12-08", "source_url": "https://med.henu.edu.cn/info/2080/25748.htm", "retrieved_or_verified_date": "2026-07-23", "extraction_status": "metadata_only", "version_status": "current_cycle_2026", "notes": "学院院赛报道，面向医学院学生；目录仅记录赛事来源，不复制获奖个人信息。"}
+      ],
+      "pending_reason": "未取得可直接作为本科推免、综合测评、奖学金或评先奖优现行细则的完整正文。"
+    },
+    "口腔医学院": {
+      "official_entry": "https://henuss.henu.edu.cn/",
+      "search_scope": ["https://henuss.henu.edu.cn/", "https://henuss.henu.edu.cn/zsjy1/bkszs.htm", "https://jwc.henu.edu.cn/tzgg.htm", "https://stu.henu.edu.cn/"],
+      "detail_sources": [
+        {"title": "河南大学口腔医学院2026年接收推荐免试研究生工作实施细则", "published_date": "2025-09-18", "source_url": "https://henuss.henu.edu.cn/info/1016/4270.htm", "retrieved_or_verified_date": "2026-07-23", "extraction_status": "metadata_only", "version_status": "not_undergraduate_rule", "notes": "研究生招生细则，不纳入本科规则。"}
+      ],
+      "competition_sources": [
+        {"title": "我院代表队荣获2024全国大学生创新发明大赛口腔医学临床技能挑战赛团队三等奖", "published_date": "2024-08-04", "source_url": "https://henuss.henu.edu.cn/info/1017/2790.htm", "retrieved_or_verified_date": "2026-07-23", "extraction_status": "metadata_only", "version_status": "historical_undergraduate_competition", "notes": "报道明确涉及口腔医学专业本科生；历史赛事，不视为2026年报名通知。"}
+      ],
+      "pending_reason": "未发现当前年度本科推免/综合测评/奖学金/评先奖优细则详情页。"
+    },
+    "基础医学院": {
+      "official_entry": "https://bms.henu.edu.cn/",
+      "search_scope": ["https://bms.henu.edu.cn/", "https://bms.henu.edu.cn/jgsz1/syjxzx1/jnsys.htm", "https://jwc.henu.edu.cn/tzgg.htm", "https://stu.henu.edu.cn/"],
+      "detail_sources": [],
+      "competition_sources": [
+        {"title": "基础医学院举行第九届全国大学生基础医学创新研究暨实验设计论坛院内选拔赛", "published_date": "2023-04-14", "source_url": "https://bms.henu.edu.cn/info/1742/6063.htm", "retrieved_or_verified_date": "2026-07-23", "extraction_status": "metadata_only", "version_status": "historical_undergraduate_competition", "notes": "明确为大学生基础医学竞赛院内选拔；未发现2026年度同类报名通知。"}
+      ],
+      "pending_reason": "现有官方页面只证明历史院内赛事和竞赛支持方向，不能据此编写当前年度竞赛规则。"
+    },
+    "护理与健康学院": {
+      "official_entry": "https://hlyjkxy.henu.edu.cn/index.htm",
+      "search_scope": ["https://hlyjkxy.henu.edu.cn/index.htm", "https://hlyjkxy.henu.edu.cn/zsjy/zsxx.htm", "https://jwc.henu.edu.cn/tzgg.htm", "https://stu.henu.edu.cn/"],
+      "detail_sources": [
+        {"title": "河南大学护理与健康学院2026年接收推荐免试研究生复试工作实施细则", "published_date": "2025-09-17", "source_url": "https://hlyjkxy.henu.edu.cn/__local/1/FC/55/F5733598DC391799FD8AF04BA49_DBDFC75D_28029.pdf", "retrieved_or_verified_date": "2026-07-23", "extraction_status": "metadata_only", "version_status": "not_undergraduate_rule", "notes": "研究生复试细则，不纳入本科规则。"},
+        {"title": "河南大学护理与健康学院2026年应届本科毕业生评先奖优拟获奖公示名单", "published_date": "2026-05-18", "source_url": "https://hlyjkxy.henu.edu.cn/info/1051/12646.htm", "retrieved_or_verified_date": "2026-07-23", "extraction_status": "official_index_only", "version_status": "current_cycle_2026", "notes": "学院首页曾列出该条目，但详情 URL 当前返回404；不据此复原评选细则。"}
+      ],
+      "competition_sources": [
+        {"title": "我院举办河南大学2026年“挑战杯”大学生创业计划竞赛学院选拔赛", "published_date": "2025-11-28", "source_url": "https://hlyjkxy.henu.edu.cn/info/1255/10826.htm", "retrieved_or_verified_date": "2026-07-23", "extraction_status": "metadata_only", "version_status": "current_cycle_2026", "notes": "学院学生赛事报道，记录为来源，不扩写报名规则。"}
+      ],
+      "pending_reason": "本科评先细则正文未取得；2026公示详情链接当前失效，因此保留待补。"
+    },
+    "河南省人民医院培养单位": {
+      "official_entry": "https://www.hnsrmyy.net",
+      "search_scope": ["https://www.hnsrmyy.net", "https://med.henu.edu.cn/", "https://jwc.henu.edu.cn/tzgg.htm", "https://stu.henu.edu.cn/"],
+      "detail_sources": [],
+      "competition_sources": [],
+      "pending_reason": "官方入口已确认，但本轮未发现可核验的河南大学本科生细则或独立竞赛报名/规则页面；医院通用信息不能替代本科生规则。"
+    },
+    "第一临床医学院（第一附属医院）": {
+      "official_entry": "https://www.hdyfy.cn",
+      "search_scope": ["https://www.hdyfy.cn", "https://www.hdyfy.cn/news/index/p/7.html", "https://jwc.henu.edu.cn/tzgg.htm", "https://stu.henu.edu.cn/"],
+      "detail_sources": [],
+      "competition_sources": [
+        {"title": "河南大学第一临床医学院（第一附属医院）学子在创新创业赛事中屡创佳绩", "published_date": "2026-04-08", "source_url": "https://www.hdyfy.cn/news/detail/id/8798.html", "retrieved_or_verified_date": "2026-07-23", "extraction_status": "metadata_only", "version_status": "audience_ambiguous", "notes": "页面同时提及博士生和学院学生，未提供本科生专属规则，暂不进入本科竞赛目录。"}
+      ],
+      "pending_reason": "未取得可证明面向本科生的现行细则或独立竞赛通知；已有赛事报道存在本科/研究生范围混合，不能直接入本科目录。"
+    },
+    "第二临床医学院（淮河医院）": {
+      "official_entry": "https://www.huaihe.com.cn",
+      "search_scope": ["https://www.huaihe.com.cn", "https://www.huaihe.com.cn/NewsList-48-12.html", "https://www.huaihe.com.cn/NewsList-21.html", "https://jwc.henu.edu.cn/tzgg.htm"],
+      "detail_sources": [],
+      "competition_sources": [],
+      "pending_reason": "已核验医院新闻/文件入口，发现的住培、博士招生和教师教学竞赛不属于本科生细则或本科生竞赛报名材料，故保留待补。"
+    },
+    "药学院": {
+      "official_entry": "https://yxy.henu.edu.cn/",
+      "search_scope": ["https://yxy.henu.edu.cn/", "https://yxy.henu.edu.cn/info/1051/15192.htm", "https://jwc.henu.edu.cn/tzgg.htm", "https://stu.henu.edu.cn/"],
+      "detail_sources": [
+        {"title": "药学院关于做好2026年应届本科毕业生评先奖优工作的通知", "published_date": "2026-05-10", "source_url": "https://yxy.henu.edu.cn/info/1051/15192.htm", "retrieved_or_verified_date": "2026-07-23", "extraction_status": "metadata_only", "version_status": "current_cycle_2026", "notes": "官方详情页可访问；本次只登记元数据，未将公示名单或研究生细则混入本科规则。"}
+      ],
+      "competition_sources": [],
+      "pending_reason": "已确认本科评先奖优通知，但未发现当前年度学院独立竞赛报名/细则详情页；竞赛目录待补保留。"
+    }
+  }
+}
